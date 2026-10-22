@@ -1,0 +1,581 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="pt-BR" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfólio | Glenda Flores</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS CDN with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            linen: '#faf9f5',
+            'linen-dark': '#f4f2ea',
+            forest: {
+              DEFAULT: '#38584d',
+              dark: '#2c453d',
+              light: '#476e60',
+              muted: '#527a6d',
+              accent: '#5b8074'
+            },
+            plum: {
+              DEFAULT: '#7052a0',
+              deep: '#623864',
+              hover: '#542f56',
+              soft: '#8668b5',
+              tint: '#f3eef8'
+            },
+            lilac: {
+              DEFAULT: '#dcd2e8',
+              light: '#ede8f5',
+              subtle: '#f5f1fa'
+            },
+            sage: {
+              DEFAULT: '#d5e2d9',
+              light: '#e9f1ec',
+              border: '#c2d4c8'
+            }
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Inter"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles -->
+<style>
+    /* Custom Scrollbar */
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: #7052A0 #FAF9F5;
+    }
+    ::-webkit-scrollbar {
+      width: 7px;
+      height: 7px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #FAF9F5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #7052A0;
+      border-radius: 9999px;
+      border: 1px solid #FAF9F5;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #59407F;
+    }
+
+    /* Subtle geometric gradient effect for hero card */
+    .hero-arc-bg {
+      background: radial-gradient(circle at 100% 0%, rgba(255,255,255,0.7) 0%, transparent 65%),
+                  radial-gradient(circle at 30% 90%, rgba(200, 185, 222, 0.4) 0%, transparent 55%),
+                  #dcd2e8;
+    }
+  </style>
+<style id="nav-active-styles" class="">header nav a.nav-link {
+    position: relative;
+    transition: color 0.25s ease;
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+  header nav a.nav-link.active,
+  header nav a.nav-link:hover {
+    color: #7052A0 !important;
+    font-weight: 600 !important;
+    background: transparent !important;
+    background-color: transparent !important;
+  }
+  header nav a.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    left: 14px;
+    right: 14px;
+    height: 2px;
+    background-color: #7052A0;
+    border-radius: 9999px;
+  }</style></head><body class="bg-linen text-slate-800 font-sans antialiased selection:bg-plum selection:text-white"><div id="topo" style="position: absolute; top: 0px; left: 0px; height: 0px; width: 0px; pointer-events: none;"></div>
+<!-- BEGIN: MainHeader -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#faf9f5]/95 backdrop-blur-md border-b border-[#e9e6dd] w-full shadow-[0_2px_10px_rgba(0,0,0,0.04)]">
+<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-4">
+<!-- Navigation Links -->
+<nav class="hidden md:flex items-center text-[13px] font-medium text-slate-600 gap-2"><a class="nav-link active inline-flex items-center justify-center py-2 px-3.5 rounded-md text-[#7052a0] transition-colors whitespace-nowrap" href="#topo" style="color: rgb(112, 82, 160); background-color: rgb(243, 238, 248); font-weight: 600;">Apresentação</a>
+<a class="nav-link inline-flex items-center justify-center py-2 px-3.5 rounded-md hover:text-[#7052a0] transition-colors whitespace-nowrap text-slate-600" href="#perfil">Sobre mim</a>
+<a class="nav-link inline-flex items-center justify-center py-2 px-3.5 rounded-md hover:text-[#7052a0] transition-colors whitespace-nowrap text-slate-600" href="#ferramentas">Ferramentas e Tecnologia</a>
+<a class="nav-link inline-flex items-center justify-center py-2 px-3.5 rounded-md hover:text-[#7052a0] transition-colors whitespace-nowrap text-slate-600" href="#experiencia">Experiência Profissional</a>
+<a class="nav-link inline-flex items-center justify-center py-2 px-3.5 rounded-md hover:text-[#7052a0] transition-colors whitespace-nowrap text-slate-600" href="#formacao">Formação Acadêmica e Cursos</a>
+<a class="nav-link inline-flex items-center justify-center py-2 px-3.5 rounded-md hover:text-[#7052a0] transition-colors whitespace-nowrap text-slate-600" href="#projetos">Projetos em Destaque</a></nav>
+<!-- CTA Button -->
+<div>
+<a class="inline-flex items-center gap-2 bg-plum-deep hover:bg-plum-hover text-white text-xs font-semibold px-5 py-2.5 rounded-full shadow-sm transition-all duration-200 hover:shadow" href="#contato">
+<span class="">VAMOS CONVERSAR</span>
+<span class="text-sm">↗</span>
+</a>
+</div>
+</div>
+</header>
+<!-- END: MainHeader -->
+<main class="pt-20">
+<!-- BEGIN: HeroSection -->
+<section class="pt-8 pb-16 md:pt-12 md:pb-20 border-b border-[#ece8df]" id="inicio" style="scroll-margin-top: 80px;">
+<div class="max-w-7xl mx-auto px-6">
+<!-- Hero Content Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Left Column (Bio & Intro) -->
+<div class="lg:col-span-8 pr-0 lg:pr-8">
+<!-- Main Name Title -->
+<div class="flex flex-wrap items-center gap-3 mb-6"><span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#f0f6f3] text-[#38584d] text-xs font-mono font-semibold tracking-wider uppercase border border-[#c5e7da] shadow-sm"><span class="w-2 h-2 rounded-full bg-[#527a6d]"></span>PORTFÓLIO DE PROJETOS DE DADOS &amp; BI</span><span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#f8f5fc] text-plum-deep text-xs font-mono font-medium tracking-wide border border-purple-200/60"><span class="w-2 h-2 rounded-full bg-[#82baa6] animate-pulse"></span>Disponível para oportunidades</span></div><h1 class="text-4xl sm:text-5xl lg:text-5xl tracking-tight leading-[1.1] mb-3" style="font-family: Lora, serif;"><span class="font-normal tracking-tight text-plum">Glenda</span> <span class="font-normal tracking-tight text-plum">Flores</span></h1>
+<!-- Subtitle -->
+<div class="mb-7">
+<h2 class="text-xl sm:text-2xl font-serif font-medium leading-snug text-[#38584d] whitespace-nowrap" style="font-family: Lora, serif;">Analista de Dados e BI <span class="text-slate-400 font-normal mx-1 font-sans text-lg">|</span> Engenheira Ambiental</h2>
+</div>
+<!-- Description -->
+<div class="max-w-2xl mb-10 space-y-3"><p class="text-base text-slate-700 font-medium leading-relaxed">Seja bem-vindo(a) ao meu portfólio!</p><p class="text-base text-slate-600 leading-relaxed">Nesta página, apresento projetos de Análise de Dados aplicados a diferentes contextos, além de um pouco da minha trajetória profissional.</p></div>
+<!-- Buttons -->
+<div class="flex flex-wrap items-center gap-4">
+<a class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-plum hover:bg-plum-deep text-white text-xs font-semibold rounded-lg shadow-sm transition-all hover:shadow duration-200" href="#projetos">
+<span class="">VER PROJETOS</span>
+<span class="text-sm">↗</span>
+</a>
+<a class="inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-transparent border border-slate-300 hover:border-[#38584d] text-[#38584d] text-xs font-semibold rounded-lg transition-colors duration-200" href="#perfil">
+<span class="">MINHA TRAJETÓRIA</span>
+<span class="text-sm">↓</span>
+</a>
+</div>
+</div>
+<!-- Right Column (Hero Photo & Graphic Frame) -->
+<div class="lg:col-span-4 flex justify-center lg:justify-end">
+<div class="w-full max-w-[400px] min-h-[520px] relative rounded-3xl p-5 lg:p-6 hero-arc-bg shadow-sm border border-purple-100/60 overflow-hidden flex flex-col justify-center items-center">
+<!-- Subtle Compass Arcs SVG overlay -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-25" fill="none" viewBox="0 0 500 500">
+<circle cx="450" cy="50" r="160" stroke="#7052a0" stroke-dasharray="3 3" stroke-width="1.2"></circle>
+<circle cx="450" cy="50" r="280" stroke="#7052a0" stroke-width="1"></circle>
+<circle cx="450" cy="400" r="400" stroke="#7052a0" stroke-width="0.8"></circle>
+</svg>
+<!-- Portrait Container -->
+<div class="relative mx-auto my-2 flex justify-center items-center w-full">
+<div class="w-72 h-[390px] sm:w-80 sm:h-[420px] bg-white p-2.5 rounded-2xl shadow-xl relative z-10 overflow-hidden border-2 border-white">
+<div class="w-full h-full rounded-xl overflow-hidden relative bg-slate-100">
+<img alt="Glenda Flores - Engenheira Ambiental e Analista de Dados" class="w-full h-full object-cover object-top transform hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdYW494giFXMElr-fqSbeavwwEEX4JRhQ9nW6imVpZxbnTYx8mPaU1nmhDCbc4xc6AraYEDWrG7BYknhQ9Emh56CaBR5sa6W-E2h47tQ4pqxzQ3ebMZ9IheX79gv-bC7dfKeCWZraRmp0FOuYK1Fr7K5N5SXu5Zz9lM9dzghItg8eePBhXtz3F7z9nBA8JsbUaoBA2AuEGki1i3A1irp_75KXYLmEcE73RLfItvb9nBZH11NSThFKABuAz55cvgNEOXQ">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: Section01_SobreMim -->
+<section class="border-b border-[#ece8df] py-16" id="perfil" style="scroll-margin-top: 80px;">
+<div class="max-w-7xl mx-auto px-6">
+<!-- Section Heading -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-4 border-b border-[#e9e6dd] mb-8">
+<div class="flex items-baseline gap-3">
+<h2 class="text-4xl font-serif text-[#38584d] font-semibold">Sobre mim</h2>
+</div>
+</div>
+<!-- 2-Column Content Layout -->
+<div class="relative overflow-hidden rounded-3xl border border-[#ece8df] shadow-sm bg-white hover:shadow-md transition-all duration-300">
+<div class="grid grid-cols-1 lg:grid-cols-12 items-stretch min-h-[300px]">
+<div class="flex flex-col justify-center z-10 p-6 md:p-8 lg:col-span-8">
+<div class="space-y-4">
+<h3 class="text-2xl sm:text-3xl text-[#2c453d] font-semibold leading-snug font-serif">Engenheira ambiental em transição para <div class=""><span class="text-plum">Análise de Dados e Business Intelligence</span>.</div></h3>
+<div class="text-slate-700 text-sm sm:text-base leading-relaxed space-y-4">
+<p class="">Tenho mais de três anos de experiência em consultoria ambiental, atuando na elaboração de estudos e relatórios técnicos, incluindo o desenvolvimento de análises de dados ambientais e dashboards.</p>
+<p class="">Ao longo da minha trajetória, trabalhei com diferentes tipos de informação e desenvolvi uma visão analítica voltada à organização, à interpretação de dados e à comunicação de resultados.</p>
+<p class="">Essa experiência me levou a aprofundar meus conhecimentos em Análise de Dados e Business Intelligence e ampliar as possibilidades de aplicação dessas habilidades em diferentes contextos.</p>
+</div>
+<p class="text-sm sm:text-base leading-relaxed text-[#2c453d] font-medium">Busco oportunidades como <strong class="font-semibold text-[#1a2520]">Analista de Dados</strong> ou <strong class="font-semibold text-[#1a2520]">Analista de BI</strong>.</p>
+<div class="pt-2 border-t border-slate-100/80"></div>
+</div>
+</div>
+<div class="relative flex items-center justify-end overflow-hidden bg-gradient-to-l from-[#faf8fc] to-white lg:col-span-4">
+<img alt="Painel Analítico Minimalista em Lavanda - Glenda Flores" class="w-full h-full object-cover object-right mix-blend-multiply pointer-events-none select-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbbd8DQxL516hCiCLpEbFMA9eFzPy-GmLHS_tj0KB0AmzqeqiZHztSFa1wD0_ZEdroJjVJJfjLIeSv49ok8KolDiKJwCL0kyycNMmDZ2TzuUJAwaBy-xlpEPwnP-Gh-Qah0wRgnCBcjZIZWFFROBsZ3jfgqt7GIXRfmlKEMr1MWgcRdTKVf_ZXNZ1isaenwUBHCHj8Enz6Z1Rx86LTWBPiCTgfQ6Js6yvueoV06bVq5rtS5gLdx8zjbSLU_7Z99mNKxg" style="mask-image: linear-gradient(105deg, transparent 0%, rgba(0, 0, 0, 0.15) 15%, rgba(0, 0, 0, 0.85) 45%, black 75%);">
+<div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(105deg, #ffffff 0%, rgba(255,255,255,0.85) 20%, rgba(255,255,255,0) 50%);"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Section01_SobreMim -->
+<!-- BEGIN: Section02_Ferramentas -->
+<section class="border-b border-[#ece8df] py-16" id="ferramentas" style="scroll-margin-top: 80px;">
+<div class="max-w-7xl mx-auto px-6">
+<!-- Section Heading -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-4 border-b border-[#e9e6dd] mb-8">
+<div class="flex items-baseline gap-3">
+<h2 class="text-4xl font-serif text-[#38584d] font-semibold">Ferramentas e Tecnologia</h2>
+</div>
+</div>
+<!-- Grid Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<div class="lg:col-span-5 relative group overflow-hidden rounded-3xl border border-[#e9e6dd] bg-white shadow-sm flex flex-col justify-between min-h-[360px] lg:min-h-full">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<img alt="Estação de Dados Aconchegante - Power Query e Análise de Dados" class="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-700" src="images/Estacao_dados.png">
+<div class="absolute inset-0 pointer-events-none" style="background: linear-gradient(to top, rgba(18, 28, 22, 0.72) 0%, rgba(18, 28, 22, 0.35) 45%, rgba(18, 28, 22, 0) 100%);"></div>
+</div>
+<div class="relative z-10 p-6 lg:p-8 mt-auto text-white">
+<h4 class="text-2xl font-serif font-bold text-white mb-2 leading-snug drop-shadow-sm">Ferramentas de análise e outras habilidades</h4>
+</div>
+</div>
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-plum/40 hover:shadow-md transition-all duration-200 flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-[#107c41]/10 flex items-center justify-center shrink-0 border border-[#107c41]/20 shadow-sm">
+<svg class="w-7 h-7" fill="none" viewBox="0 0 32 32"><path d="M19.5 5H27C27.5523 5 28 5.44772 28 6V26C28 26.5523 27.5523 27 27 27H19.5V5Z" fill="#107C41"></path><path d="M19.5 5H10.5C9.94772 5 9.5 5.44772 9.5 6V11H19.5V5Z" fill="#185ABD" opacity="0.2"></path><path d="M19.5 11H9.5V21H19.5V11Z" fill="#107C41" opacity="0.8"></path><path d="M19.5 21H9.5V26C9.5 26.5523 9.94772 27 10.5 27H19.5V21Z" fill="#0E6334"></path><path d="M28 11.5H19.5V16.5H28V11.5Z" fill="#21A366"></path><path d="M28 16.5H19.5V21.5H28V16.5Z" fill="#107C41"></path><path d="M28 21.5H19.5V27H27C27.5523 27 28 26.5523 28 26V21.5Z" fill="#0E6334"></path><path d="M19.5 6.5H28V11.5H19.5V6.5Z" fill="#33C481"></path><rect fill="#107C41" height="16" rx="2" width="14" x="4" y="8"></rect><path d="M7.8 13L9.7 16.2L7.6 19.5H9.5L10.6 17.6C10.7 17.4 10.8 17.2 10.9 17C11 17.2 11.1 17.4 11.2 17.6L12.3 19.5H14.1L12.1 16.2L14 13H12.3L11.3 14.8C11.2 15 11.1 15.2 11 15.4C10.9 15.2 10.8 15 10.7 14.8L9.6 13H7.8Z" fill="white"></path></svg>
+</div>
+<div class="flex-1 min-w-0"><h3 class="text-[15px] font-bold text-[#38584d] mb-1">Excel</h3><p class="text-xs text-slate-600 leading-relaxed">Organização, tratamento e análise de dados.</p></div>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-plum/40 hover:shadow-md transition-all duration-200 flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-[#f2c811]/15 flex items-center justify-center shrink-0 border border-[#f2c811]/30 shadow-sm">
+<svg class="w-7 h-7" fill="none" viewBox="0 0 32 32"><rect fill="#DDA300" height="20" rx="1.5" width="6" x="20" y="6"></rect><rect fill="#F2C811" height="15" rx="1.5" width="6" x="13" y="11"></rect><rect fill="#F9E066" height="9" rx="1.5" width="6" x="6" y="17"></rect></svg>
+</div>
+<div class="flex-1 min-w-0"><h3 class="text-[15px] font-bold text-[#38584d] mb-1">Power BI</h3><p class="text-xs text-slate-600 leading-relaxed">Tratamento de dados, modelagem, criação de dashboards e análises com DAX.</p></div>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-plum/40 hover:shadow-md transition-all duration-200 flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-[#00758f]/10 flex items-center justify-center shrink-0 border border-[#00758f]/25 shadow-sm">
+<svg class="w-7 h-7" fill="none" viewBox="0 0 24 24"><ellipse cx="12" cy="5" fill="#336791" rx="8" ry="3"></ellipse><path d="M4 5V10C4 11.66 7.58 13 12 13C16.42 13 20 11.66 20 10V5" fill="none" stroke="#00758F" stroke-linecap="round" stroke-width="2"></path><path d="M4 10V15C4 16.66 7.58 18 12 18C16.42 18 20 16.66 20 15V10" fill="none" stroke="#00758F" stroke-linecap="round" stroke-width="2"></path><path d="M4 15V19C4 20.66 7.58 22 12 22C16.42 22 20 20.66 20 19V15" fill="none" stroke="#336791" stroke-linecap="round" stroke-width="2"></path><ellipse cx="12" cy="5" fill="#00758F" fill-opacity="0.15" rx="8" ry="3" stroke="#00758F" stroke-width="1.5"></ellipse></svg>
+</div>
+<div class="flex-1 min-w-0"><h3 class="text-[15px] font-bold text-[#38584d] mb-1">SQL</h3><p class="text-xs text-slate-600 leading-relaxed">Em aprendizado, com foco em consultas e extração de dados.</p></div>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-plum/40 hover:shadow-md transition-all duration-200 flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-[#589632]/10 flex items-center justify-center shrink-0 border border-[#589632]/25 shadow-sm">
+<img alt="QGIS Logo" class="w-7 h-7 object-contain mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaCdhga7YO-ar2AT2gdqlTaoSLttRdhPCL_-Onwkr8aCx9X7ovoWnPZc6X_6FUUpLXYWrh8SBmQRH9G7ID2K-cC9I19wdg09H0RDAXTil1tkIWDmwmUoXaSptzqy7oNnDQAOlxQNS1ajfLdYMU57yluYwAS9VVM8F3JfVEmB2hr8szdw4rOd17eJcoMqlNVXA8b0uYzOlx-P5BuhpeTb5_c71bS8Hsl0viK07lzs9vpTVFi1bZAOnMERccc_acBHz8Ew">
+</div>
+<div class="flex-1 min-w-0"><h3 class="text-[15px] font-bold text-[#38584d] mb-1">QGIS</h3><p class="text-xs text-slate-600 leading-relaxed">Análise e visualização de dados geoespaciais.</p></div>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-plum/40 hover:shadow-md transition-all duration-200 flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-[#185abd]/10 flex items-center justify-center shrink-0 border border-[#185abd]/20 shadow-sm">
+<svg class="w-7 h-7" fill="none" viewBox="0 0 32 32"><path d="M19.5 5H27C27.5523 5 28 5.44772 28 6V26C28 26.5523 27.5523 27 27 27H19.5V5Z" fill="#185ABD"></path><path d="M28 11.5H19.5V16.5H28V11.5Z" fill="#2870D3"></path><path d="M28 16.5H19.5V21.5H28V16.5Z" fill="#185ABD"></path><path d="M28 21.5H19.5V27H27C27.5523 27 28 26.5523 28 26V21.5Z" fill="#104A9E"></path><path d="M19.5 6.5H28V11.5H19.5V6.5Z" fill="#4185E8"></path><rect fill="#185ABD" height="16" rx="2" width="14" x="4" y="8"></rect><path d="M7.2 13H8.8L9.9 17.5L11 13H12.4L13.5 17.5L14.6 13H16.2L14.3 19.5H12.8L11.7 15.3L10.6 19.5H9.1L7.2 13Z" fill="white"></path></svg>
+</div>
+<div class="flex-1 min-w-0"><h3 class="text-[15px] font-bold text-[#38584d] mb-1">Word</h3><p class="text-xs text-slate-600 leading-relaxed">Elaboração e formatação de documentos e relatórios técnicos.</p></div>
+</div>
+<div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-plum/40 hover:shadow-md transition-all duration-200 flex items-center gap-4">
+<div class="w-14 h-14 rounded-2xl bg-[#2563eb]/10 flex items-center justify-center shrink-0 border border-[#2563eb]/25 shadow-sm">
+<svg class="w-7 h-7" fill="none" stroke="#2563eb" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" viewBox="0 0 24 24"><circle cx="12" cy="12" fill="#2563eb" fill-opacity="0.08" r="9" stroke="#2563eb"></circle><path d="M3.6 9H20.4"></path><path d="M3.6 15H20.4"></path><path d="M12 3C14.5 5.5 15.8 8.7 15.8 12C15.8 15.3 14.5 18.5 12 21C9.5 18.5 8.2 15.3 8.2 12C8.2 8.7 9.5 5.5 12 3Z"></path></svg>
+</div>
+<div class="flex-1 min-w-0"><h3 class="text-[15px] font-bold text-[#38584d] mb-1">Inglês</h3><p class="text-xs text-slate-600 leading-relaxed">Comunicação e leitura em nível intermediário.</p></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Section02_Ferramentas -->
+<!-- BEGIN: Section03_Experiencia -->
+<section class="border-b border-[#ece8df] py-16" id="experiencia" style="scroll-margin-top: 80px;">
+<div class="max-w-7xl mx-auto px-6">
+<!-- Section Heading -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-4 border-b border-[#e9e6dd] mb-8">
+<div class="flex items-baseline gap-3"><h2 class="text-4xl font-serif text-[#38584d] font-semibold">Experiência Profissional</h2></div>
+</div>
+<!-- 2-Column Experience Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<!-- Left Column: Featured Major Experience Box -->
+<div class="text-white rounded-3xl relative overflow-hidden shadow-lg border border-[#789984] h-full lg:col-span-7 p-6 lg:p-8" style="background: linear-gradient(145deg, #8EAD9A 0%, #A8C1B0 60%, #789984 100%);">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-4 mb-4">
+<div class="flex-1">
+<h4 class="text-lg sm:text-xl font-bold text-[#243D32] tracking-tight">Analista Ambiental Jr.</h4>
+<p class="text-sm text-[#243D32] font-sans mt-0.5 font-medium">MRS Ambiental</p>
+</div>
+<div class="text-right shrink-0">
+<span class="font-sans font-medium tracking-wide text-[#243D32] bg-white/25 px-3 py-1.5 rounded-md inline-block border border-white/15 text-[10px]">OUT/2023 — NOV/2025</span>
+</div>
+</div>
+<!-- Responsibilities Bullet Points -->
+<ul class="text-[#243D32] leading-relaxed font-sans text-sm gap-2.5 flex flex-col">
+<li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#243D32] mt-1.5 shrink-0"></span><span class="">Analisei dados sobre recursos hídricos, clima, qualidade da água, sedimentos, solo e ar, construindo gráficos em Excel e dashboards no Power BI;</span></li>
+<li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#243D32] mt-1.5 shrink-0"></span><span class="">Melhorei processos de atualização de gráficos de monitoramento contínuo de dados ambientais;</span></li>
+<li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#243D32] mt-1.5 shrink-0"></span><span class="">Atuei na elaboração de diagnósticos, avaliações de impactos ambientais e programas ambientais;</span></li>
+<li class="flex items-start gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#243D32] mt-1.5 shrink-0"></span><span class="">Participei de processos de licenciamento ambiental, com elaboração de relatórios de condicionantes e organização de documentos.</span></li>
+</ul>
+<div class="border-t border-white/10 pt-4 mt-4">
+<div class="flex items-center gap-2 mb-2.5"><span class="text-[11px] font-mono uppercase tracking-wider text-[#243D32] font-semibold">Ferramentas aplicadas</span></div>
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/25 border border-white/15 text-[#243D32] text-xs font-mono font-medium shadow-sm backdrop-blur-md"><span class="w-1.5 h-1.5 rounded-full bg-[#82baa6]"></span>Excel</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/25 border border-white/15 text-[#243D32] text-xs font-mono font-medium shadow-sm backdrop-blur-md"><span class="w-1.5 h-1.5 rounded-full bg-[#82baa6]"></span>Power BI</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/25 border border-white/15 text-[#243D32] text-xs font-mono font-medium shadow-sm backdrop-blur-md"><span class="w-1.5 h-1.5 rounded-full bg-[#82baa6]"></span>Word</span>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-white/25 border border-white/15 text-[#243D32] text-xs font-mono font-medium shadow-sm backdrop-blur-md"><span class="w-1.5 h-1.5 rounded-full bg-[#82baa6]"></span>QGIS</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Timeline Cards -->
+<div class="h-full flex flex-col justify-between lg:col-span-5 gap-3">
+<div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:border-[#527a6d]/40 transition-colors p-5">
+<div><h4 class="text-base font-bold text-[#38584d]">Estagiária</h4><p class="text-sm text-slate-600 font-sans mt-0.5">MRS Ambiental</p></div>
+<div class="text-right">
+<span class="font-sans font-medium tracking-wide text-slate-600 bg-slate-100 px-3 py-1.5 rounded-md inline-block text-[10px]">SET/2022 — SET/2023</span>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-2 hover:border-[#527a6d]/40 transition-colors p-5">
+<div><h4 class="text-base font-bold text-[#38584d]">Estagiária</h4><p class="text-sm text-slate-600 font-sans mt-0.5">Tecnicall Engenharia</p></div>
+<div class="text-right">
+<span class="font-sans font-medium tracking-wide text-slate-600 bg-slate-100 px-3 py-1.5 rounded-md inline-block text-[10px]">JUL/2021 — JUN/2022</span>
+</div>
+</div>
+<div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:border-[#527a6d]/40 transition-colors p-5">
+<div class="min-w-0 flex-1"><h4 class="text-base font-bold text-[#38584d]">Projetista</h4><p class="text-sm text-slate-600 font-sans mt-0.5">Concreta Consultoria e Serviços</p><p class="text-xs text-slate-400 font-sans mt-0.5">Empresa Júnior</p></div>
+<div class="text-right shrink-0"><span class="font-sans font-medium tracking-wide text-slate-600 bg-slate-100 px-3 py-1.5 rounded-md inline-block text-[10px] whitespace-nowrap">JUL/2020 — SET/2021</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Section03_Experiencia -->
+<!-- BEGIN: Section04_Formacao -->
+<section class="border-b border-[#ece8df] py-16" id="formacao" style="scroll-margin-top: 80px;">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-4 border-b border-[#e9e6dd] mb-8">
+<div class="flex items-baseline gap-3"><h2 class="text-4xl font-serif text-[#38584d] font-semibold">Formação e Cursos</h2></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+<div class="flex flex-col gap-6">
+<!-- Card 1: Engenharia Ambiental -->
+<div class="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200/80 shadow-sm hover:border-plum/40 hover:shadow-md transition-all flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-start gap-4 mb-3">
+<div class="w-14 h-14 rounded-xl bg-lilac/40 text-plum-deep flex items-center justify-center shrink-0 border border-purple-200/60 shadow-sm">
+<svg class="w-7 h-7 text-plum-deep" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+</div>
+<div class="flex-1 min-w-0 flex flex-col gap-1 justify-start">
+<div class="flex items-center justify-between gap-2">
+<span class="font-mono tracking-wider uppercase text-plum font-semibold text-[11px] leading-none">FORMAÇÃO ACADÊMICA</span>
+<span class="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-slate-600 bg-[#DFF7E8] px-3 py-1.5 rounded-full border border-slate-200 leading-none"><span class="w-1.5 h-1.5 rounded-full bg-[#527a6d]"></span>Concluída</span>
+</div>
+<h3 class="text-xl font-serif font-bold text-[#1a2520] leading-tight tracking-tight">Engenharia Ambiental</h3>
+</div>
+</div>
+<div class="pl-[72px]">
+<p class="text-slate-700 font-medium text-sm leading-relaxed mt-0.5">Universidade de Brasília (UnB)</p>
+<div class="flex items-center gap-2 my-3">
+<span class="w-1.5 h-1.5 rounded-full bg-[#527a6d]"></span>
+<span class="text-xs sm:text-[13px] font-sans text-slate-600">Graduação concluída em 2023</span>
+</div>
+</div>
+</div>
+<div class="pt-3 border-t border-slate-100 flex flex-wrap gap-1.5 pl-[72px]">
+<span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f0f6f3] text-[#38584d] border border-[#c5e7da]">Cálculo</span>
+<span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f0f6f3] text-[#38584d] border border-[#c5e7da]">Estatística</span>
+<span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f0f6f3] text-[#38584d] border border-[#c5e7da]">Métodos computacionais</span>
+<span class="text-[11px] font-mono px-2 py-0.5 rounded bg-[#f0f6f3] text-[#38584d] border border-[#c5e7da]">TCC com uso do Processo Hierárquico Analítico (AHP)</span>
+</div>
+</div>
+<!-- Card 2: Formação Analista de Dados -->
+<div class="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200/80 shadow-sm hover:border-plum/40 hover:shadow-md transition-all flex flex-col justify-between flex-1">
+<div>
+<div class="flex items-start gap-4 mb-3">
+<div class="w-14 h-14 rounded-xl bg-lilac/40 text-plum-deep flex items-center justify-center shrink-0 border border-purple-200/60 shadow-sm">
+<svg class="w-7 h-7 text-plum-deep" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path><line x1="9" x2="15" y1="7" y2="7"></line><line x1="9" x2="13" y1="11" y2="11"></line></svg>
+</div>
+<div class="flex-1 min-w-0 flex flex-col gap-1 justify-start">
+<div class="flex items-center justify-between gap-2">
+<span class="font-mono tracking-wider uppercase text-plum font-semibold text-[11px] leading-none">CURSO</span>
+<span class="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-plum-deep bg-plum-tint px-3 py-1.5 rounded-full border border-purple-200/60 shadow-sm leading-none"><span class="w-2 h-2 rounded-full bg-plum animate-pulse"></span>Em andamento</span>
+</div>
+<h3 class="text-xl font-serif font-bold text-[#1a2520] leading-tight tracking-tight">Formação Analista de Dados</h3>
+</div>
+</div>
+<div class="pl-[72px]">
+<p class="text-slate-700 font-medium text-sm leading-relaxed mt-0.5">Comunidade DS</p>
+<div class="flex items-center gap-2 my-3">
+<span class="w-1.5 h-1.5 rounded-full bg-plum"></span>
+<span class="text-xs sm:text-[13px] font-sans text-slate-600">Previsão de conclusão em dez/2026</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Certificados / Ferramentas -->
+<div class="bg-white p-6 sm:p-7 rounded-2xl border border-slate-200/80 shadow-sm hover:border-plum/40 hover:shadow-md transition-all flex flex-col justify-between h-full">
+<div class="flex flex-col h-full justify-between gap-6">
+<div class="flex items-start gap-4">
+<div class="w-14 h-14 rounded-xl bg-lilac/40 text-plum-deep flex items-center justify-center shrink-0 border border-purple-200/60 shadow-sm">
+<svg class="w-7 h-7 text-plum-deep" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"></circle><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"></path></svg>
+</div>
+<div class="flex-1 min-w-0 flex flex-col gap-1 justify-start">
+<div class="flex items-center justify-between gap-2">
+<span class="font-mono tracking-wider uppercase text-plum font-semibold text-[11px] leading-none">CERTIFICADOS</span>
+
+</div>
+<h3 class="text-xl font-serif font-bold text-[#1a2520] leading-tight tracking-tight">Certificações em Ferramentas</h3>
+</div>
+</div>
+<div class="flex flex-col flex-1 justify-between gap-4">
+<div class="flex-1 flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 sm:p-6 rounded-2xl bg-linen hover:bg-[#f8f5fc] border border-slate-100 hover:border-purple-200/60 transition-all duration-200">
+<div class="flex items-center gap-4 min-w-0">
+<div class="w-12 h-12 rounded-xl bg-white border border-purple-200/60 flex items-center justify-center shrink-0 shadow-sm p-2">
+<img alt="Comunidade DS" class="w-full h-full object-contain rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDORj9GmH-b937_6sPtvSIURk8ZmsG1qFkP-71zQscklCSCikWjiIi_Wa1TY0B7nZtORbwoDVfB53wx4InhCEiQSnBSw6V6_m9IX0agj8tIV3-EprD_kHa85ADablV-B6NeXposIdPKSqYB0M3fv3OWdV_j6v6g1br5Ghztn3IpJxARNMzJyzu-ICzepKi6FXK2qpWdZC7LJrvn4yYlLRwHXQ2rsecoN9hskLWfNcDdq7ndSaN8P0m4Y3cq18VhgeGsDA">
+</div>
+<div class="min-w-0">
+<h4 class="text-[15px] sm:text-base font-sans font-bold text-[#1a2520] leading-snug mb-1 truncate">Power BI para Análise de Dados</h4>
+<div class="flex items-center gap-2 text-xs text-slate-600 flex-wrap">
+<span class="font-medium text-[#38584d] text-xs sm:text-[13px]">Comunidade DS</span>
+<span class="text-slate-400">•</span>
+<span class="text-slate-600 text-xs sm:text-[13px] font-sans">Emitido em out/2026</span>
+</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-slate-600 bg-[#DFF7E8] px-3 py-1.5 rounded-full border border-slate-200 shrink-0 self-start sm:self-center leading-none"><span class="w-1.5 h-1.5 rounded-full bg-[#527a6d]"></span>Concluído</span>
+</div>
+<div class="flex-1 flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-5 sm:p-6 rounded-2xl bg-linen hover:bg-[#f8f5fc] border border-slate-100 hover:border-purple-200/60 transition-all duration-200">
+<div class="flex items-center gap-4 min-w-0">
+<div class="w-12 h-12 rounded-xl bg-white border border-purple-200/60 flex items-center justify-center shrink-0 shadow-sm p-2">
+<img alt="Comunidade DS" class="w-full h-full object-contain rounded" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDORj9GmH-b937_6sPtvSIURk8ZmsG1qFkP-71zQscklCSCikWjiIi_Wa1TY0B7nZtORbwoDVfB53wx4InhCEiQSnBSw6V6_m9IX0agj8tIV3-EprD_kHa85ADablV-B6NeXposIdPKSqYB0M3fv3OWdV_j6v6g1br5Ghztn3IpJxARNMzJyzu-ICzepKi6FXK2qpWdZC7LJrvn4yYlLRwHXQ2rsecoN9hskLWfNcDdq7ndSaN8P0m4Y3cq18VhgeGsDA">
+</div>
+<div class="min-w-0">
+<h4 class="text-[15px] sm:text-base font-sans font-bold text-[#1a2520] leading-snug mb-1 truncate">Excel para Análise de Dados</h4>
+<div class="flex items-center gap-2 text-xs text-slate-600 flex-wrap">
+<span class="font-medium text-[#38584d] text-xs sm:text-[13px]">Comunidade DS</span>
+<span class="text-slate-400">•</span>
+<span class="text-slate-600 text-xs sm:text-[13px] font-sans">Emitido em jul/2026</span>
+</div>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 text-xs font-mono font-medium text-slate-600 bg-[#DFF7E8] px-3 py-1.5 rounded-full border border-slate-200 shrink-0 self-start sm:self-center leading-none"><span class="w-1.5 h-1.5 rounded-full bg-[#527a6d]"></span>Concluído</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Section04_Formacao -->
+<!-- BEGIN: Section05_Projetos -->
+<section class="border-b border-[#ece8df] py-16" id="projetos" style="scroll-margin-top: 80px;">
+<div class="max-w-7xl mx-auto px-6">
+<!-- Section Heading -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-4 pb-4 border-b border-[#e9e6dd] mb-8">
+<div>
+<h2 class="text-4xl font-serif text-[#38584d] font-semibold">Projetos em Destaque</h2>
+</div>
+</div>
+<!-- 3 Cards Layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"><!-- Project Card 1 -->
+<div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"><div class="h-full flex flex-col"><a class="w-full h-64 overflow-hidden border-b border-slate-100 bg-[#f8f9fa] relative flex items-center justify-center p-2 group/img cursor-pointer block" href="projeto-qualidade-da-agua.html"><img alt="Monitoramento de Qualidade da Água" class="w-full h-full object-contain object-center rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/D.1-PRINCIPAL.jpg"><div class="absolute inset-0 bg-[#faf9f5]/75 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4"><span class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-semibold bg-plum hover:bg-plum-deep text-[#faf8f5] shadow-md transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">Ver detalhes <span class="text-sm leading-none">↗</span></span></div></a><div class="p-6 flex flex-col flex-1 justify-between gap-3"><div><h3 class="text-xl font-sans font-bold text-[#1a2520] leading-snug group-hover:text-plum transition-colors mb-2.5"><a class="hover:text-plum transition-colors" href="projeto-qualidade-da-agua.html">Monitoramento de Qualidade da Água</a></h3><p class="text-[13px] leading-relaxed text-[#49685E] font-sans">Análise de dados do monitoramento de qualidade da água de um corpo hídrico litorâneo, em 10 pontos amostrais</p></div></div></div></div>
+<!-- Project Card 2 -->
+<div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"><div class="h-full flex flex-col"><a class="w-full h-64 overflow-hidden border-b border-slate-100 bg-[#f8f9fa] relative flex items-center justify-center p-2 group/img cursor-pointer block" href="projeto-ecommerce.html"><img alt="Análise exploratória - Análise de vendas" class="w-full h-full object-contain object-center rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/D.2-PRINCIPAL.jpg"><div class="absolute inset-0 bg-[#faf9f5]/75 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4"><span class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-semibold bg-plum hover:bg-plum-deep text-[#faf8f5] shadow-md transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">Ver detalhes <span class="text-sm leading-none">↗</span></span></div></a><div class="p-6 flex flex-col flex-1 justify-between gap-3"><div><h3 class="text-xl font-sans font-bold text-[#1a2520] leading-snug group-hover:text-plum transition-colors mb-2.5"><a class="hover:text-plum transition-colors" href="projeto-ecommerce.html">Análise de E-Commerce</a></h3><p class="text-[13px] leading-relaxed text-[#49685E] font-sans">Análise de vendas, produtos, pagamentos, etc. de um E-Commerce brasileiro</p></div></div></div></div>
+<!-- Project Card 3 -->
+<div class="bg-white rounded-2xl border border-slate-200/80 shadow-sm overflow-hidden flex flex-col justify-between hover:shadow-lg transition-all duration-300 group"><div class="h-full flex flex-col"><a class="w-full h-64 overflow-hidden border-b border-slate-100 bg-[#f8f9fa] relative flex items-center justify-center p-2 group/img cursor-pointer block" href="projeto-airbnb-ny.html"><img alt="Dashboard de indicadores - Airbnb em Nova York" class="w-full h-full object-contain object-center rounded-lg group-hover:scale-105 transition-transform duration-500" src="images/D.3-PRINCIPAL.jpg"><div class="absolute inset-0 bg-[#faf9f5]/75 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4"><span class="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-full text-xs font-semibold bg-plum hover:bg-plum-deep text-[#faf8f5] shadow-md transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">Ver detalhes <span class="text-sm leading-none">↗</span></span></div></a><div class="p-6 flex flex-col flex-1 justify-between gap-3"><div><h3 class="text-xl font-sans font-bold text-[#1a2520] leading-snug group-hover:text-plum transition-colors mb-2.5"><a class="hover:text-plum transition-colors" href="projeto-airbnb-ny.html">Análise de dados abertos do Airbnb em Nova York</a></h3><p class="text-[13px] leading-relaxed text-[#49685E] font-sans">Análise de dados do Airbnb em Nova York, como acomodações, valores e localidade</p></div></div></div></div></div>
+</div>
+</section>
+<!-- END: Section05_Projetos -->
+<!-- BEGIN: Section06_Contato -->
+<section class="relative overflow-hidden bg-[#e5eee8] py-20" id="contato" style="scroll-margin-top: 80px;">
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7">
+<h2 class="text-5xl sm:text-6xl font-serif font-semibold text-[#1a2520] tracking-tight mb-6">Vamos conversar?</h2>
+<p class="text-base text-[#2c453d] max-w-lg leading-relaxed">Estou aberta a oportunidades profissionais e projetos em Análise de Dados e Business Intelligence.</p>
+</div>
+<div class="lg:col-span-5 flex flex-wrap lg:justify-end gap-3">
+<a class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-plum hover:bg-plum-deep text-white text-xs font-mono tracking-wider transition-all shadow-sm hover:shadow" href="mailto:glendarflores@hotmail.com"><span class="">E-MAIL</span><span class="">↗</span></a>
+<a class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-[#355248] hover:bg-[#2c453d] text-white text-xs font-mono tracking-wider transition-all shadow-sm hover:shadow" href="https://www.linkedin.com/in/glenda-flores-8830b61b5" rel="noopener noreferrer" target="_blank"><span class="">LINKEDIN</span><span class="">↗</span></a>
+
+</div>
+</div>
+</div>
+</section>
+<!-- END: Section06_Contato -->
+</main>
+<!-- BEGIN: MainFooter -->
+<footer class="bg-[#2c453d] text-white/70 py-8 border-t border-white/10 text-xs font-mono">
+<div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center gap-4 justify-end">
+
+<a class="hover:text-white transition-colors flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 hover:border-white/30 text-white/90" href="#topo">
+<span class="">VOLTAR AO TOPO</span>
+<span class="">↑</span>
+</a>
+</div>
+</footer>
+<!-- END: MainFooter -->
+<!-- Functional Minimalist Script (Navigation Active State) -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const navLinks = Array.from(document.querySelectorAll('header nav a.nav-link'));
+  
+  // Mapping of section elements to their nav links
+  const sectionMap = [
+    { id: 'inicio', linkHref: '#topo' },
+    { id: 'perfil', linkHref: '#perfil' },
+    { id: 'ferramentas', linkHref: '#ferramentas' },
+    { id: 'experiencia', linkHref: '#experiencia' },
+    { id: 'formacao', linkHref: '#formacao' },
+    { id: 'projetos', linkHref: '#projetos' }
+  ];
+
+  function setActiveLink(targetHref) {
+    navLinks.forEach((link) => {
+      const isMatch = link.getAttribute('href') === targetHref;
+      if (isMatch) {
+        link.classList.add('active');
+        link.classList.remove('text-slate-600');
+        link.style.color = '#7052A0';
+        link.style.backgroundColor = '#f3eef8';
+        link.style.fontWeight = '600';
+      } else {
+        link.classList.remove('active');
+        link.classList.add('text-slate-600');
+        link.style.color = '';
+        link.style.backgroundColor = '';
+        link.style.fontWeight = '';
+      }
+    });
+  }
+
+  const HEADER_OFFSET = 80;
+
+  function updateActiveSection() {
+    const scrollPos = window.scrollY;
+
+    // If near the very top of the page, Apresentação is active
+    if (scrollPos < 120) {
+      setActiveLink('#topo');
+      return;
+    }
+
+    // Check if bottom of page is reached
+    if ((window.innerHeight + window.scrollY) >= (document.documentElement.scrollHeight - 50)) {
+      setActiveLink('#projetos');
+      return;
+    }
+
+    let currentSectionHref = '#topo';
+    for (let i = 0; i < sectionMap.length; i++) {
+      const item = sectionMap[i];
+      const el = document.getElementById(item.id);
+      if (el) {
+        const top = el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET - 30;
+        if (scrollPos >= top) {
+          currentSectionHref = item.linkHref;
+        }
+      }
+    }
+
+    setActiveLink(currentSectionHref);
+  }
+
+  let ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        updateActiveSection();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // Initial call
+  updateActiveSection();
+});
+</script>
+
+
+</body></html>
